@@ -1,17 +1,19 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Formulario from './components/Formulario';
+import Insignia from './components/Insignia';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Ahora un nuevo proyecto con un formulario
-        </p>
-      </header>
-      <Formulario/>
+    <div className= 'container mt-2'>
+      <div className='row'>
+        <div className="App col-6">
+          <Insignia/>
+        </div>
+        <div className='col-6'>
+          <Formulario/>
+        </div>
+    </div>
     </div>
   );
 }

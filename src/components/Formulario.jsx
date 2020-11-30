@@ -1,4 +1,6 @@
 import React from 'react';
+import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
 
 class Formulario extends React.Component {
   constructor(props) {
@@ -33,59 +35,70 @@ class Formulario extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='mb-3'>
         <form onSubmit={this.handleSubmit}>
-          <div>
+          <div className='form-grupp'>
             <label>
               Last Name  :
-              <input type="text"
+              <input
+              className='form-control'
+              type="text"
               name ='lastName'
               value={this.state.lastName}
               onChange={this.handleChange}/>
             </label>
           </div>
 
-          <div>
+          <div className='form-grupp'>
             <label >
               First Name  : 
-              <input type="text" 
+              <input 
+              className='form-control'
+              type="text" 
               name='firstName'
               value={this.state.firstName} 
               onChange={this.handleChange}/>
             </label>
           </div>
 
-          <div>
+          <div className='form-grupp'>
             <label >
               NumberPhone: 
-              <input type="number" 
+              <input 
+              className='form-control'
+              type="number" 
               name='numberPhone'
               value={this.state.numberPhone} 
               onChange={this.handleChange}/>
             </label>
           </div>
 
-          <div>
+          <div className='form-grupp'>
             <label >
               BirthDate: 
-              <input type="number" 
+              <input 
+              className='form-control'
+              type="number" 
               name='birthDate'
               value={this.state.birthDate} 
               onChange={this.handleChange}/>
             </label>
           </div>
 
-          <div>
+          <div className='form-grupp'>
             <label >
               Address: 
-              <textarea type="text" 
+              <textarea 
+              className='form-control'
+              type="text" 
               name='Address'
               value={this.state.Address} 
               onChange={this.handleChange}/>
             </label>
           </div>
 
-          <input 
+          <input
+          className ='btn btn-primary'
           type="submit" 
           value='Submit'/>
         </form>
