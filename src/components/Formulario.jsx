@@ -93,7 +93,8 @@ class Formulario extends React.Component {
               type="text" 
               name='Address'
               value={this.state.Address} 
-              onChange={this.handleChange}/>
+              onChange={this.handleChange}
+              maxLength='200'/>
             </label>
           </div>
 
