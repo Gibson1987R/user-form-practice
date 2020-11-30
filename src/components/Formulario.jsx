@@ -5,38 +5,39 @@ import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 class Formulario extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {value: ''};
+    // this.state = {value: ''};
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    // this.handleChange = this.handleChange.bind(this);
+    // this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(event) {
-    let target = event.target;
+  // handleChange(event) {
+  //   let target = event.target;
 
-    let value = target.type === 'checkbox' ? target.checked : target.value;
+  //   let value = target.type === 'checkbox' ? target.checked : target.value;
 
-    let name = target.name;
+  //   let name = target.name;
 
-    this.setState({
-      [name]: value
-    });
-  }
+    
+  //   this.setState({
+  //     [name]: value
+  //   });
+  // }
 
-  handleSubmit(event) {
-    alert(`A description was submitted: 
-    ${this.state.lastName} 
-    ${this.state.firstName} 
-    ${this.state.numberPhone} 
-    ${this.state.birthDate} 
-    ${this.state.Address}`);
-    event.preventDefault();
-  }
+  // handleSubmit(event) {
+  //   alert(`A description was submitted: 
+  //   ${this.props.lastName} 
+  //   ${this.props.firstName} 
+  //   ${this.props.numberPhone} 
+  //   ${this.props.birthDate} 
+  //   ${this.props.Address}`);
+  //   event.preventDefault();
+  // }
 
   render() {
     return (
       <div className='mb-3'>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.props.onSubmit}>
           <div className='form-grupp'>
             <label>
               Last Name  :
@@ -44,8 +45,8 @@ class Formulario extends React.Component {
               className='form-control'
               type="text"
               name ='lastName'
-              value={this.state.lastName}
-              onChange={this.handleChange}/>
+              value={this.props.value}
+              onChange={this.props.onChange}/>
             </label>
           </div>
 
@@ -56,8 +57,8 @@ class Formulario extends React.Component {
               className='form-control'
               type="text" 
               name='firstName'
-              value={this.state.firstName} 
-              onChange={this.handleChange}/>
+              value={this.props.value} 
+              onChange={this.props.onChange}/>
             </label>
           </div>
 
@@ -68,8 +69,8 @@ class Formulario extends React.Component {
               className='form-control'
               type="number" 
               name='numberPhone'
-              value={this.state.numberPhone} 
-              onChange={this.handleChange}/>
+              value={this.props.value} 
+              onChange={this.props.onChange}/>
             </label>
           </div>
 
@@ -80,8 +81,8 @@ class Formulario extends React.Component {
               className='form-control'
               type="number" 
               name='birthDate'
-              value={this.state.birthDate} 
-              onChange={this.handleChange}/>
+              value={this.props.value} 
+              onChange={this.props.onChange}/>
             </label>
           </div>
 
@@ -92,8 +93,8 @@ class Formulario extends React.Component {
               className='form-control'
               type="text" 
               name='Address'
-              value={this.state.Address} 
-              onChange={this.handleChange}
+              value={this.props.value} 
+              onChange={this.props.onChange}
               maxLength='200'/>
             </label>
           </div>
