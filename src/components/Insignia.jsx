@@ -5,9 +5,7 @@ import './styles/styles.css';
 
 function EdadUsuario(props) {
   let fecha = new Date(props.birthDate);
-
   let fechaActual = new Date();
-
   let edad = fechaActual.getFullYear() - fecha.getFullYear();
   console.log(typeof fecha);
   console.log(fecha);
@@ -17,13 +15,6 @@ function EdadUsuario(props) {
     } else if (edad <=17) {
       return(<p>Eres menor tienes {edad} años de edad</p>)
     } else{ return(<p></p>)}
-
-    // if (edad >= 18 ) {
-    // return (<p>Eres mayor tienes {edad} años de edad</p>)
-    // } else if (edad <=17) {
-    //   return(<p>Eres menor tienes {edad} años de edad</p>)
-    // } else{ return(<p></p>)}
-
 }
 
 class Insignia extends React.Component {
