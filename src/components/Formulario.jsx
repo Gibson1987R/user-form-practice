@@ -91,7 +91,7 @@ class Formulario extends React.Component {
               BirthDate: 
               <input 
               className='form-control'
-              type="number" 
+              type="date" 
               name='birthDate'
               value={this.props.value} 
               onChange={this.props.onChange}/>
