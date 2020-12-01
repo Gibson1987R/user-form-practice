@@ -1,5 +1,6 @@
 // import { render } from '@testing-library/react';
 import React from 'react';
+import Gravatar from './Gravatar';
 import './styles/styles.css';
 
 function EdadUsuario(props) {
@@ -24,15 +25,18 @@ class Insignia extends React.Component {
           <img className='Badge__hero-1' src="" alt="Logo empresa"/>
         </div>
         <div className="Badge__section-name">
-          <img className= 'Badge__avatar' src="" alt=""/>
+          <Gravatar 
+          className='Badge__avatar'
+          email ={this.props.email}
+          alt='Avatar'/>
           <h1> {this.props.lastName} <br/> {this.props.firstName}</h1>  
         </div>
         <div className="Badges__section-info">
           <h3>{this.props.numberPhone}</h3>
-          <h3>
+          <h5>
             <EdadUsuario birthDate={this.props.birthDate}/>
-          </h3>
-          <h3>{this.props.Address}</h3>
+          </h5>
+          <h6>{this.props.Address}</h6>
         </div>
       </div>
     );

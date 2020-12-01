@@ -76,6 +76,18 @@ class Formulario extends React.Component {
 
           <div className='form-grupp'>
             <label >
+              Email: 
+              <input 
+              className='form-control'
+              type='email' 
+              name='email'
+              value={this.props.value} 
+              onChange={this.props.onChange}/>
+            </label>
+          </div>
+
+          <div className='form-grupp'>
+            <label >
               BirthDate: 
               <input 
               className='form-control'

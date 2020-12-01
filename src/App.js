@@ -47,6 +47,7 @@ class App extends React.Component {
             numberPhone={this.state.numberPhone}
             birthDate={this.state.birthDate}
             Address={this.state.Address}
+            email={this.state.email}
             />
           </div>
           <div className='col-6'>
