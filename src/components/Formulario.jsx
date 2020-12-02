@@ -1,39 +1,9 @@
 import React from 'react';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
+import Contador from './Contador';
 
 class Formulario extends React.Component {
-  constructor(props) {
-    super(props);
-    // this.state = {value: ''};
-
-    // this.handleChange = this.handleChange.bind(this);
-    // this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  // handleChange(event) {
-  //   let target = event.target;
-
-  //   let value = target.type === 'checkbox' ? target.checked : target.value;
-
-  //   let name = target.name;
-
-    
-  //   this.setState({
-  //     [name]: value
-  //   });
-  // }
-
-  // handleSubmit(event) {
-  //   alert(`A description was submitted: 
-  //   ${this.props.lastName} 
-  //   ${this.props.firstName} 
-  //   ${this.props.numberPhone} 
-  //   ${this.props.birthDate} 
-  //   ${this.props.Address}`);
-  //   event.preventDefault();
-  // }
-
   render() {
     return (
       <div className='mb-3'>
@@ -107,9 +77,15 @@ class Formulario extends React.Component {
               name='Address'
               value={this.props.value} 
               onChange={this.props.onChange}
-              maxLength='200'/>
+              id='direccion'
+              />
             </label>
           </div>
+
+          <Contador
+          onChange={this.props.onChange}
+          Address={this.props.Address}
+          /> 
 
           <input
           className ='btn btn-primary'
