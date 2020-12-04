@@ -8,11 +8,17 @@ import Insignia from './components/Insignia';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {value: ''};
-    
-    // this.state = {form: { value :''}};
-    // this.handleChange = this.handleChange.bind(this);
-    // this.handleSubmit = this.handleSubmit.bind(this);
+    // this.state = {value: ''};
+    this.state = {
+      lastName: '', 
+      firstName:'', 
+      numberPhone:'',
+      birthDate:'', 
+      Address:''
+    };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
 
   // this.handleChange = e => {
     
@@ -23,29 +29,51 @@ class App extends React.Component {
   //     }
   //   });
   // }
-// ----------------------
-    this.handleChange = e => { 
-      let target = e.target;
+// // ----------------------
+//       handleChange = e => { 
+//       let target = e.target;
   
-      let value = target.type === 'checkbox' ? target.checked : target.value;
+//       let value = target.type === 'checkbox' ? target.checked : target.value;
 
-      let name = target.name;
+//       let name = target.name;
 
 
 
-      if( value.lenght > 10 ){
-        alert('mas corta')
-      }else{
-        this.setState({
-          [name]: value
-        });
-      }
+//       // if( value.lenght > 10 ){
+//       //   alert('mas corta')
+//       // }else{
+//       //   this.setState({
+//       //     [name]: value
+//       //   });
+//       // }
   
-      // this.setState({
-      //   [name]: value
-      // });
-    }
+//       this.setState({
+//         [name]: value
+//       });
+//     }
   } 
+
+  handleChange = e => { 
+    let target = e.target;
+
+    let value = target.type === 'checkbox' ? target.checked : target.value;
+
+    let name = target.name;
+
+
+
+    // if( value.lenght > 10 ){
+    //   alert('mas corta')
+    // }else{
+    //   this.setState({
+    //     [name]: value
+    //   });
+    // }
+
+    this.setState({
+      [name]: value
+    });
+  }
 
 
 // ------------------------
@@ -55,18 +83,9 @@ class App extends React.Component {
       ${this.state.firstName} 
       ${this.state.numberPhone} 
       ${this.state.birthDate} 
-      ${this.state.Address}`);
+      ${this.state.address}`);
       e.preventDefault();
     }
-    // this.handleSubmit = e => {
-    //   alert(`A description was submitted: 
-    //   ${this.state.lastName} 
-    //   ${this.state.firstName} 
-    //   ${this.state.numberPhone} 
-    //   ${this.state.birthDate} 
-    //   ${this.state.Address}`);
-    //   e.preventDefault();
-    // }
 
   render() {
     return (
@@ -78,16 +97,15 @@ class App extends React.Component {
             firstName={this.state.firstName}
             numberPhone={this.state.numberPhone}
             birthDate={this.state.birthDate}
-            Address={this.state.Address}
+            address={this.state.address}
             email={this.state.email}
             />
           </div>
           <div className='col-6'>
             <Formulario 
             onChange={this.handleChange}
-            formValues={this.state.value}
             onSubmit={this.handleSubmit}
-            Address={this.state.Address}/>
+            address={this.state.address}/>
           </div>
         </div>
       </div>

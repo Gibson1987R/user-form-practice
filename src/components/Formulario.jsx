@@ -15,7 +15,7 @@ class Formulario extends React.Component {
               className='form-control'
               type="text"
               name ='lastName'
-              value={this.props.value}
+              value={this.props.lastName}
               onChange={this.props.onChange}/>
             </label>
           </div>
@@ -27,7 +27,7 @@ class Formulario extends React.Component {
               className='form-control'
               type="text" 
               name='firstName'
-              value={this.props.value} 
+              value={this.props.firstName} 
               onChange={this.props.onChange}/>
             </label>
           </div>
@@ -39,7 +39,7 @@ class Formulario extends React.Component {
               className='form-control'
               type="number" 
               name='numberPhone'
-              value={this.props.value} 
+              value={this.props.numberPhone} 
               onChange={this.props.onChange}/>
             </label>
           </div>
@@ -51,7 +51,7 @@ class Formulario extends React.Component {
               className='form-control'
               type='email' 
               name='email'
-              value={this.props.value} 
+              value={this.props.email} 
               onChange={this.props.onChange}/>
             </label>
           </div>
@@ -63,7 +63,7 @@ class Formulario extends React.Component {
               className='form-control'
               type="date" 
               name='birthDate'
-              value={this.props.value} 
+              value={this.props.birthDate} 
               onChange={this.props.onChange}/>
             </label>
           </div>
@@ -74,8 +74,8 @@ class Formulario extends React.Component {
               <textarea 
               className='form-control'
               type="text" 
-              name='Address'
-              value={this.props.value} 
+              name='address'
+              value={this.props.address} 
               onChange={this.props.onChange}
               id='direccion'
               />
@@ -84,7 +84,7 @@ class Formulario extends React.Component {
 
           <Contador
           onChange={this.props.onChange}
-          Address={this.props.Address}
+          address={this.props.address}
           /> 
 
           <input

@@ -7,8 +7,8 @@ function EdadUsuario(props) {
   let fecha = new Date(props.birthDate);
   let fechaActual = new Date();
   let edad = fechaActual.getFullYear() - fecha.getFullYear();
-  console.log(typeof fecha);
-  console.log(fecha);
+  // console.log(typeof fecha);
+  // console.log(fecha);
   
   if (edad >= 18 ) {
     return (<p>Eres mayor tienes {edad} años de edad</p>)
@@ -36,7 +36,7 @@ class Insignia extends React.Component {
           <h5>
             <EdadUsuario birthDate={this.props.birthDate}/>
           </h5>
-          <h6>{this.props.Address}</h6>
+          <h6>{this.props.address}</h6>
         </div>
       </div>
     );
