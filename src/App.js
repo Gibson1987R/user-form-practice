@@ -14,7 +14,7 @@ class App extends React.Component {
       firstName:'', 
       numberPhone:'',
       birthDate:'', 
-      Address:''
+      address:''
     };
 
     this.handleChange = this.handleChange.bind(this);

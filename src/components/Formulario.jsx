@@ -77,7 +77,7 @@ class Formulario extends React.Component {
               name='address'
               value={this.props.address} 
               onChange={this.props.onChange}
-              id='direccion'
+              maxLength= '50'
               />
             </label>
           </div>
